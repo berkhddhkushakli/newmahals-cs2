@@ -121,5 +121,23 @@ footer{text-align:center;padding:28px 16px;color:#888;border-top:1px solid #2929
   <strong>BALKAN RAGE GAMING</strong>
   <p>© 2026 · Counter-Strike 2 Community</p>
 </footer>
+
+<script>
+async function updateSteamLogin() {
+  try {
+    const response = await fetch('/api/me');
+    const data = await response.json();
+    const button = document.querySelector('nav a[href="/auth/steam"]');
+
+    if (button && data.loggedIn && data.user) {
+      button.textContent = '👤 ' + data.user.displayName;
+      button.href = '/api/me';
+    }
+  } catch (error) {
+    console.error('Steam login error:', error);
+  }
+}
+updateSteamLogin();
+</script>
 </body>
 </html>
