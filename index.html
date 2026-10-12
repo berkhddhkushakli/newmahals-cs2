@@ -4,59 +4,119 @@ index.html
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NEWMAHALS HS ONLY</title>
+<title>BALKAN RAGE GAMING | CS2</title>
+<meta name="description" content="BALKAN RAGE GAMING — Counter-Strike 2 community">
 <style>
+:root{--red:#ed1835;--bg:#080809;--panel:#151518;--muted:#aaa}
 *{box-sizing:border-box}
-body{margin:0;background:#090d16;color:#fff;font-family:Arial,sans-serif}
-header{text-align:center;padding:35px 15px;background:linear-gradient(135deg,#101a32,#7c1424)}
-h1{margin:0;color:#ff394f;font-size:32px}
-header p{color:#ddd}
-nav{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:15px;background:#111827}
-nav a{color:white;text-decoration:none;padding:10px 16px;border:1px solid #374151;border-radius:8px}
-main{max-width:950px;margin:auto;padding:20px}
-section{background:#131b2b;margin:18px 0;padding:22px;border-radius:12px;border:1px solid #26344c}
-h2{color:#ff4655}
-.item{background:#202b40;padding:15px;margin:10px 0;border-radius:8px}
-button{background:#e52c42;color:white;border:0;padding:10px 15px;border-radius:6px;cursor:pointer}
-.small{color:#aab6cc;font-size:14px}
-footer{text-align:center;padding:25px;color:#9ca3af}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#25060b,#09090b 65%);text-align:center;padding:35px 18px;border-bottom:2px solid var(--red)}
+.logo{width:150px;height:150px;object-fit:contain;border-radius:18px}
+h1{margin:15px 0 8px;font-size:clamp(27px,5vw,44px);letter-spacing:2px}
+h1 span{color:var(--red)}
+header p{color:#ccc;margin:8px}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:14px;background:#111114;position:sticky;top:0;z-index:5;border-bottom:1px solid #302126}
+nav a{color:#fff;text-decoration:none;padding:10px 13px;border-radius:6px;font-size:14px}
+nav a:hover{background:var(--red)}
+main{max-width:1050px;margin:auto;padding:24px 16px}
+.hero{padding:35px 22px;text-align:center;background:radial-gradient(ellipse at top,#40101a,#151518 65%);border:1px solid #50202a;border-radius:14px}
+.hero h2{font-size:clamp(24px,4vw,36px);margin:0 0 12px}
+.hero p{color:#ccc;line-height:1.6}
+.btn{display:inline-block;margin:8px 5px;padding:13px 20px;background:var(--red);color:#fff;text-decoration:none;border:0;border-radius:6px;font-weight:bold;cursor:pointer}
+.btn.secondary{background:#252529;border:1px solid #555}
+section{margin-top:22px;padding:22px;background:var(--panel);border:1px solid #29292f;border-radius:12px}
+h2{margin-top:0}
+h2 .accent{color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:#202024;padding:18px;border-radius:9px;border:1px solid #333}
+.card h3{margin-top:0}
+.muted{color:var(--muted);line-height:1.6}
+.tag{display:inline-block;color:#ff6478;border:1px solid #78303d;padding:5px 9px;border-radius:20px;font-size:12px}
+footer{text-align:center;padding:28px 16px;color:#888;border-top:1px solid #29292f;margin-top:25px}
 </style>
 </head>
 <body>
 <header>
-<h1>ツ NEWMAHALS ツ</h1>
-<p>HS ONLY • COUNTER-STRIKE 2 COMMUNITY</p>
-<p>🎮 Добре дошли в нашия сървър!</p>
+  <img class="logo" src="logo.png" alt="Balkan Rage Gaming лого" onerror="this.style.display='none'">
+  <h1>BALKAN <span>RAGE</span> GAMING</h1>
+  <p>COUNTER-STRIKE 2 COMMUNITY</p>
+  <span class="tag">БЪЛГАРСКА CS2 ОБЩНОСТ</span>
 </header>
+
 <nav>
-<a href="#music">🎵 MVP музика</a>
-<a href="#skins">🔫 Скинове</a>
-<a href="#rank">🏆 Класация</a>
+  <a href="#home">Начало</a>
+  <a href="#server">Сървър</a>
+  <a href="#skins">Скинове</a>
+  <a href="#mvp">MVP музика</a>
+  <a href="#ranking">Класация</a>
+  <a href="#bans">Банове</a>
+  <a href="#team">Екип</a>
+  <a href="#discord">Discord</a>
 </nav>
+
 <main>
-<section>
-<h2>🎮 Нашият сървър</h2>
-<p><b>ツNEWMAHALSツ HS ONLY</b></p>
-<p class="small">CS2 Community Server</p>
-<p>IP адресът на сървъра ще добавим тук.</p>
-</section>
-<section id="music">
-<h2>🎵 MVP музика</h2>
-<div class="item">MVP Track 1 <span class="small">— добавяме песните след настройката на плъгина</span></div>
-<p class="small">Изборът на песен от сайта сам по себе си не я активира в играта. Ще го свържем с плъгин.</p>
-</section>
-<section id="skins">
-<h2>🔫 Скинове</h2>
-<div class="item">AK-47 — скинове</div>
-<div class="item">AWP — скинове</div>
-<div class="item">M4A1-S / M4A4 — скинове</div>
-<p class="small">За да се използват скиновете в сървъра, ще трябва съвместим плъгин.</p>
-</section>
-<section id="rank">
-<h2>🏆 Класация</h2>
-<div class="item">Системата за точки ще се свърже със сървъра на следващ етап.</div>
-</section>
+  <div class="hero" id="home">
+    <h2>WELCOME TO <span style="color:#ed1835">BALKAN RAGE</span></h2>
+    <p>Твоето място за Counter-Strike 2. Играй, състезавай се и се изкачи в класацията!</p>
+    <a class="btn" href="#server">🎮 Нашият сървър</a>
+    <a class="btn secondary" href="#ranking">🏆 Класация</a>
+  </div>
+
+  <section id="server">
+    <h2>🎮 <span class="accent">CS2</span> СЪРВЪР</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>BALKAN RAGE | HS ONLY</h3>
+        <p class="muted">Counter-Strike 2 Community Server</p>
+        <p><span class="tag">IP адресът ще добавим тук</span></p>
+        <button class="btn" onclick="alert('Ще добавим IP адреса на сървъра, когато го потвърдим.')">Информация</button>
+      </div>
+      <div class="card">
+        <h3>Статус</h3>
+        <p class="muted">Свързването със сървъра ще бъде настроено отделно.</p>
+        <span class="tag">Очаква интеграция</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="skins">
+    <h2>🔫 <span class="accent">СКИНОВЕ</span></h2>
+    <p class="muted">Тук ще добавим избиране на скинове. Реалното запазване на избора изисква сървърна интеграция.</p>
+  </section>
+
+  <section id="mvp">
+    <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
+    <p class="muted">Тук ще поставим списък с MVP песни и предварително прослушване, след като подготвим аудиофайловете и интеграцията.</p>
+  </section>
+
+  <section id="ranking">
+    <h2>🏆 <span class="accent">КЛАСАЦИЯ</span></h2>
+    <div class="grid">
+      <div class="card"><h3>Точки</h3><p class="muted">Ще се зареждат от CS2 сървъра.</p></div>
+      <div class="card"><h3>Убийства</h3><p class="muted">Ще се зареждат от статистиката на играчите.</p></div>
+    </div>
+  </section>
+
+  <section id="bans">
+    <h2>🚫 <span class="accent">БАНЛИСТ</span></h2>
+    <p class="muted">Публичният банлист ще се свърже със сървърната база данни по-късно.</p>
+  </section>
+
+  <section id="team">
+    <h2>🛡️ <span class="accent">НАШИЯТ ЕКИП</span></h2>
+    <p class="muted">Информацията за администраторите ще добавим тук.</p>
+  </section>
+
+  <section id="discord">
+    <h2>💬 <span class="accent">ПРИСЪЕДИНИ СЕ</span></h2>
+    <p class="muted">Discord поканата ще добавим, когато ми изпратиш линка.</p>
+  </section>
 </main>
-<footer>NEWMAHALS HS ONLY • CS2 COMMUNITY</footer>
+
+<footer>
+  <strong>BALKAN RAGE GAMING</strong>
+  <p>© 2026 · Counter-Strike 2 Community</p>
+</footer>
 </body>
 </html>
