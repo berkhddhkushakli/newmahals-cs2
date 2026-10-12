@@ -28,8 +28,8 @@ passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((user, done) => done(null, user));
 
 passport.use(new SteamStrategy({
-  returnURL: `${BASE_URL.replace(/\\/$/, "")}/auth/steam/return`,
-  realm: `${BASE_URL.replace(/\\/$/, "")}/`,
+${BASE_URL.replace(/\/$/, "")}/auth/steam/return,
+${BASE_URL.replace(/\/$/, "")}/,
   apiKey: STEAM_API_KEY
 }, (_identifier, profile, done) => {
   done(null, {
