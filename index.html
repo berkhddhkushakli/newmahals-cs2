@@ -88,7 +88,27 @@ footer{text-align:center;padding:28px 16px;color:#888;border-top:1px solid #2929
     <p class="muted">Тук ще добавим избиране на скинове. Реалното запазване на избора изисква сървърна интеграция.</p>
   </section>
 
-  <section id="mvp">
+  
+<section id="mvp">
+  <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
+  <p class="muted">Избери песен и я прослушай предварително.</p>
+
+  <div class="card">
+    <label for="mvpSong">Избери MVP песен:</label>
+    <select id="mvpSong">
+      <option value="">-- Избери песен --</option>
+    </select>
+
+    <audio id="mvpPlayer" controls preload="none" style="width:100%;margin-top:15px">
+      Браузърът ти не поддържа аудио.
+    </audio>
+
+    <p id="mvpMessage" class="muted">
+      Песните ще се появят, когато добавим аудиофайловете.
+    </p>
+  </div>
+</section>
+
   <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
   <p class="muted">Тук ще поставим списък с MVP песни и предварително прослушване...</p>
 </section>
