@@ -65,4 +65,26 @@ app.get("*", (req, res, next) => {
   if (req.path.startsWith("/auth/") || req.path.startsWith("/api/")) return res.status(404).json({ error: "Not found" });
   res.sendFile(path.join(__dirname, "index.html"), err => { if (err) next(err); });
 });
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT || 3306),
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 5
+});
+
+app.get("/api/leaderboard", async (req, res) => {
+  try {
+    const [rows] = await pool.query(
+      "SELECT steam_id, player_name, points, kills FROM players ORDER BY points DESC LIMIT 100"
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
 app.listen(PORT, "0.0.0.0", () => console.log(`NEWMAHALS backend listening on port ${PORT}`));
