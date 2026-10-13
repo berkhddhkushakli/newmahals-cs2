@@ -3,7 +3,7 @@ const session = require("express-session");
 const passport = require("passport");
 const SteamStrategy = require("passport-steam").Strategy;
 const path = require("path");
-
+const mysql = require("mysql2/promise");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const BASE_URL = process.env.BASE_URL;
