@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BALKAN RAGE-GAMING | Competitive</title>
+<meta name="description" content="BALKAN RAGE-GAMING Competitive CS2 community.">
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#08090c;color:#fff;font-family:Arial,Helvetica,sans-serif}body{display:flex;justify-content:center}.page{position:relative;width:100%;max-width:928px;line-height:0}.hero{display:block;width:100%;height:auto}.hotspot{position:absolute;display:block;background:transparent;border:0;cursor:pointer;line-height:normal;text-decoration:none;color:transparent}.steam{top:5.8%;right:2.4%;width:28%;height:5.1%}.menu{top:1.1%;right:5.1%;width:8%;height:4%}.copy{top:60.7%;left:5.2%;width:45%;height:6.4%}.music{top:60.7%;left:56.8%;width:43%;height:6.4%}.ipcopy{top:72.7%;right:2.5%;width:10%;height:4.8%}.hint{position:absolute;left:-9999px}
+@media(min-width:700px){.page{margin:0 auto}.hero{width:100%}}
+</style>
+</head>
+<body><main class="page" aria-label="Balkan Rage-Gaming Competitive">
+<img class="hero" src="assets/competitive-hero.png" alt="BALKAN RAGE-GAMING Competitive CS2 community, server 45.144.155.120:8846">
+<a class="hotspot steam" href="#steam" aria-label="Вход със Steam" title="Вход със Steam"><span class="hint">Вход със Steam</span></a>
+<button class="hotspot menu" aria-label="Меню" title="Меню" onclick="alert('Менюто ще бъде свързано при добавяне на реалните страници.')"><span class="hint">Меню</span></button>
+<button class="hotspot copy" id="copyMain" aria-label="Копирай IP адреса" title="Копирай IP адреса"><span class="hint">Копирай IP адреса</span></button>
+<a class="hotspot music" href="#music" aria-label="Избери MVP песен" title="Избери MVP песен"><span class="hint">Избери MVP песен</span></a>
+<button class="hotspot ipcopy" id="copyIcon" aria-label="Копирай IP адреса" title="Копирай IP адреса"><span class="hint">Копирай IP адреса</span></button>
+</main>
+<script>
+async function copyIp(){const ip='45.144.155.120:8846';try{await navigator.clipboard.writeText(ip);alert('IP адресът е копиран: '+ip)}catch(e){prompt('Копирай IP адреса:',ip)}}
+document.getElementById('copyMain').addEventListener('click',copyIp);document.getElementById('copyIcon').addEventListener('click',copyIp);
+</script></body></html>
