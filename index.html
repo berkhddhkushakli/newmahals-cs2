@@ -90,7 +90,55 @@ footer{text-align:center;padding:28px 16px;color:#888;border-top:1px solid #2929
   </section>
 
   
-<section id="mvp">
+<section id="mvp"> <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
+  <p class="muted">Избери песен и я прослушай предварително.</p>
+
+  <div class="card">
+    <label for="mvpSong">Избери MVP песен:</label>
+
+    <select id="mvpSong">
+      <option value="">-- Избери песен --</option>
+      <option value="4-mom4eto-g-n-poruchka-g-n-poriecka-official-lyric-video_jc50RMR9.mp3">
+        MOM4ETO - G-N PORUCHKA
+      </option>
+    </select>
+
+    <audio id="mvpPlayer" controls preload="none"
+      style="width:100%;margin-top:15px">
+      Браузърът ти не поддържа аудио.
+    </audio>
+
+    <p id="mvpMessage" class="muted">
+      Избери песен, за да я прослушаш.
+    </p>
+  </div>
+</section>
+
+
+
+Стъпка 2 — добавяме прослушването
+В края на файла намери последния <script> — този, в който е updateSteamLogin(). Остави съществуващия код за Steam входа и добави следващия код точно преди затварящия </script>:
+
+const mvpSong = document.getElementById('mvpSong');
+const mvpPlayer = document.getElementById('mvpPlayer');
+const mvpMessage = document.getElementById('mvpMessage');
+
+mvpSong.addEventListener('change', () => {
+  const file = mvpSong.value;
+
+  mvpPlayer.pause();
+  mvpPlayer.removeAttribute('src');
+  mvpPlayer.load();
+
+  if (!file) {
+    mvpMessage.textContent = 'Избери песен, за да я прослушаш.';
+    return;
+  }
+
+  mvpPlayer.src = '/' + encodeURIComponent(file);
+  mvpPlayer.load();
+  mvpMessage.textContent = 'Избрана песен: ' + mvpSong.selectedOptions[0].text;
+});
   <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
   <p class="muted">Избери песен и я прослушай предварително.</p>
 
