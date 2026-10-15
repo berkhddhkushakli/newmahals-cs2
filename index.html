@@ -1,4 +1,4 @@
-index.html
+
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -34,184 +34,142 @@ h2 .accent{color:var(--red)}
 .muted{color:var(--muted);line-height:1.6}
 .tag{display:inline-block;color:#ff6478;border:1px solid #78303d;padding:5px 9px;border-radius:20px;font-size:12px}
 footer{text-align:center;padding:28px 16px;color:#888;border-top:1px solid #29292f;margin-top:25px}
+select{background:#151518;color:#fff;padding:10px;border:1px solid #555;border-radius:6px;max-width:100%}
+audio{display:block;width:100%;margin-top:15px}
 </style>
 </head>
 <body>
 <header>
 <img class="logo" src="IMG_2893.png" alt="Balkan Rage Gaming лого" onerror="this.style.display='none'">
-  <h1>BALKAN <span>RAGE</span> GAMING</h1>
-  <p>COUNTER-STRIKE 2 COMMUNITY</p>
-  <span class="tag">БЪЛГАРСКА CS2 ОБЩНОСТ</span>
+<h1>BALKAN <span>RAGE</span> GAMING</h1>
+<p>COUNTER-STRIKE 2 COMMUNITY</p>
+<span class="tag">БЪЛГАРСКА CS2 ОБЩНОСТ</span>
 </header>
 
 <nav>
-  <a href="#home">Начало</a>
-  <a href="#server">Сървър</a>
-  <a href="#skins">Скинове</a>
-  <a href="#mvp">MVP музика</a>
-  <a href="#ranking">Класация</a>
-  <a href="#bans">Банове</a>
-  <a href="#team">Екип</a>
-  <a href="#discord">Discord</a>
-  
+<a href="#home">Начало</a>
+<a href="#server">Сървър</a>
+<a href="#skins">Скинове</a>
+<a href="#mvp">MVP музика</a>
+<a href="#ranking">Класация</a>
+<a href="#bans">Банове</a>
+<a href="#team">Екип</a>
+<a href="#discord">Discord</a>
 <a class="btn" href="/auth/steam">🎮 Вход със Steam</a>
-
 </nav>
 
 <main>
-  <div class="hero" id="home">
-    <h2>WELCOME TO <span style="color:#ed1835">BALKAN RAGE</span></h2>
-    <p>Твоето място за Counter-Strike 2. Играй, състезавай се и се изкачи в класацията!</p>
-    <a class="btn" href="#server">🎮 Нашият сървър</a>
-    <a class="btn secondary" href="#ranking">🏆 Класация</a>
-  </div>
+<div class="hero" id="home">
+<h2>WELCOME TO <span style="color:#ed1835">BALKAN RAGE</span></h2>
+<p>Твоето място за Counter-Strike 2. Играй, състезавай се и се изкачи в класацията!</p>
+<a class="btn" href="#server">🎮 Нашият сървър</a>
+<a class="btn secondary" href="#ranking">🏆 Класация</a>
+</div>
 
-  <section id="server">
-    <h2>🎮 <span class="accent">CS2</span> СЪРВЪР</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>BALKAN RAGE | HS ONLY</h3>
-        <p class="muted">Counter-Strike 2 Community Server</p>
-      <p><span class="tag">45.144.155.120:8846</span></p>
-        <button class="btn" onclick="alert('Ще добавим IP адреса на сървъра, когато го потвърдим.')">Информация</button>
-      </div>
-      <div class="card">
-        <h3>Статус</h3>
-        <p class="muted">Counter-Strike 2 Community Server</p>
-<p class="muted">Статусът ще бъде свързан със сървъра.</p>
-<span class="tag">Очаква интеграция</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="skins">
-    <h2>🔫 <span class="accent">СКИНОВЕ</span></h2>
-    <p class="muted">Тук ще добавим избиране на скинове. Реалното запазване на избора изисква сървърна интеграция.</p>
-  </section>
-
-  
-<section id="mvp"> <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
-  <p class="muted">Избери песен и я прослушай предварително.</p>
-
-  <div class="card">
-    <label for="mvpSong">Избери MVP песен:</label>
-
-    <select id="mvpSong">
-      <option value="">-- Избери песен --</option>
-      <option value="4-mom4eto-g-n-poruchka-g-n-poriecka-official-lyric-video_jc50RMR9.mp3">
-        MOM4ETO - G-N PORUCHKA
-      </option>
-    </select>
-
-    <audio id="mvpPlayer" controls preload="none"
-      style="width:100%;margin-top:15px">
-      Браузърът ти не поддържа аудио.
-    </audio>
-
-    <p id="mvpMessage" class="muted">
-      Избери песен, за да я прослушаш.
-    </p>
-  </div>
+<section id="server">
+<h2>🎮 <span class="accent">CS2</span> СЪРВЪР</h2>
+<div class="grid">
+<div class="card">
+<h3>NEWMAHALS | HS ONLY</h3>
+<p class="muted">Counter-Strike 2 Community Server</p>
+<p><span class="tag">45.144.155.120:8846</span></p>
+<button class="btn" onclick="navigator.clipboard.writeText('45.144.155.120:8846').then(()=>alert('IP адресът е копиран!')).catch(()=>alert('IP: 45.144.155.120:8846'))">Копирай IP</button>
+</div>
+<div class="card">
+<h3>Статус</h3>
+<p class="muted">Counter-Strike 2 Community Server</p>
+<span class="tag">Статусът предстои да се свърже</span>
+</div>
+</div>
 </section>
 
+<section id="skins">
+<h2>🔫 <span class="accent">СКИНОВЕ</span></h2>
+<p class="muted">Избирането и запазването на скинове ще бъде добавено със сървърната интеграция.</p>
+</section>
 
+<section id="mvp">
+<h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
+<p class="muted">Избери песен и я прослушай предварително.</p>
+<div class="card">
+<label for="mvpSong">Избери MVP песен:</label>
+<select id="mvpSong">
+<option value="">-- Избери песен --</option>
+<option value="https://raw.githubusercontent.com/berkhddhkushakli/newmahals-cs2/main/4-mom4eto-g-n-poruchka-g-n-poriecka-official-lyric-video_ic5ORMR9.mp3">MOM4ETO - G-N PORUCHKA</option>
+</select>
+<audio id="mvpPlayer" controls preload="none"></audio>
+<p id="mvpMessage" class="muted">Избери песен, за да я прослушаш.</p>
+</div>
+</section>
 
-Стъпка 2 — добавяме прослушването
-В края на файла намери последния <script> — този, в който е updateSteamLogin(). Остави съществуващия код за Steam входа и добави следващия код точно преди затварящия </script>:
+<section id="ranking">
+<h2>🏆 <span class="accent">КЛАСАЦИЯ</span></h2>
+<div class="grid">
+<div class="card"><h3>Точки</h3><p class="muted">Ще се зареждат от CS2 сървъра.</p></div>
+<div class="card"><h3>Убийства</h3><p class="muted">Ще се зареждат от статистиката на играчите.</p></div>
+</div>
+</section>
 
-const mvpSong = document.getElementById('mvpSong');
-const mvpPlayer = document.getElementById('mvpPlayer');
-const mvpMessage = document.getElementById('mvpMessage');
+<section id="bans">
+<h2>🚫 <span class="accent">БАНЛИСТ</span></h2>
+<p class="muted">Публичният банлист предстои да бъде свързан със сървърната база данни.</p>
+</section>
 
-mvpSong.addEventListener('change', () => {
-  const file = mvpSong.value;
+<section id="team">
+<h2>🛡️ <span class="accent">НАШИЯТ ЕКИП</span></h2>
+<p class="muted">Информацията за администраторите ще добавим тук.</p>
+</section>
 
+<section id="discord">
+<h2>💬 <span class="accent">ПРИСЪЕДИНИ СЕ</span></h2>
+<p class="muted">Discord поканата ще добавим, когато имаме линка.</p>
+</section>
+</main>
+
+<footer>
+<strong>BALKAN RAGE GAMING</strong>
+<p>© 2026 · Counter-Strike 2 Community</p>
+</footer>
+
+<script>
+async function updateSteamLogin(){
+  try{
+    const response=await fetch('/api/me');
+    const data=await response.json();
+    const button=document.querySelector('nav a[href="/auth/steam"]');
+    if(button && data.loggedIn && data.user){
+      button.textContent='👤 '+data.user.displayName;
+      button.href='/api/me';
+    }
+  }catch(error){
+    console.error('Steam login error:',error);
+  }
+}
+
+updateSteamLogin();
+
+const mvpSong=document.getElementById('mvpSong');
+const mvpPlayer=document.getElementById('mvpPlayer');
+const mvpMessage=document.getElementById('mvpMessage');
+
+mvpSong.addEventListener('change',()=>{
+  const file=mvpSong.value;
   mvpPlayer.pause();
   mvpPlayer.removeAttribute('src');
   mvpPlayer.load();
 
-  if (!file) {
-    mvpMessage.textContent = 'Избери песен, за да я прослушаш.';
+  if(!file){
+    mvpMessage.textContent='Избери песен, за да я прослушаш.';
     return;
   }
 
-  mvpPlayer.src = '/' + encodeURIComponent(file);
+  mvpPlayer.src=file;
   mvpPlayer.load();
-  mvpMessage.textContent = 'Избрана песен: ' + mvpSong.selectedOptions[0].text;
+  mvpMessage.textContent='Избрана песен: '+mvpSong.selectedOptions[0].text;
+  mvpPlayer.play().catch(()=>{
+    mvpMessage.textContent='Натисни Play, за да чуеш песента.';
+  });
 });
-  <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
-  <p class="muted">Избери песен и я прослушай предварително.</p>
-
-  <div class="card">
-    <label for="mvpSong">Избери MVP песен:</label>
-    <select id="mvpSong">
-      <option value="">-- Избери песен --</option>
-    </select>
-    <option value="4-mom4eto-g-n-poruchka-g-n-poriecka-official-lyric-video_jc50RMR9.mp3">MOM4ETO - G-N PORUCHKA</option>
- Копирай реда
-
-    <audio id="mvpPlayer" controls preload="none" style="width:100%;margin-top:15px">
-      Браузърът ти не поддържа аудио.
-    </audio>
-
-    <p id="mvpMessage" class="muted">
-      Песните ще се появят, когато добавим аудиофайловете.
-    </p>
-  </div>
-</section>
-
-  <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
-  <p class="muted">Тук ще поставим списък с MVP песни и предварително прослушване...</p>
-</section>
-    <h2>🎵 <span class="accent">MVP МУЗИКА</span></h2>
-    <p class="muted">Тук ще поставим списък с MVP песни и предварително прослушване, след като подготвим аудиофайловете и интеграцията.</p>
-  </section>
-
-  <section id="ranking">
-    <h2>🏆 <span class="accent">КЛАСАЦИЯ</span></h2>
-    <div class="grid">
-      <div class="card"><h3>Точки</h3><p class="muted">Ще се зареждат от CS2 сървъра.</p></div>
-      <div class="card"><h3>Убийства</h3><p class="muted">Ще се зареждат от статистиката на играчите.</p></div>
-    </div>
-  </section>
-
-  <section id="bans">
-    <h2>🚫 <span class="accent">БАНЛИСТ</span></h2>
-    <p class="muted">Публичният банлист ще се свърже със сървърната база данни по-късно.</p>
-  </section>
-
-  <section id="team">
-    <h2>🛡️ <span class="accent">НАШИЯТ ЕКИП</span></h2>
-    <p class="muted">Информацията за администраторите ще добавим тук.</p>
-  </section>
-
-  <section id="discord">
-    <h2>💬 <span class="accent">ПРИСЪЕДИНИ СЕ</span></h2>
-    <p class="muted">Discord поканата ще добавим, когато ми изпратиш линка.</p>
-  </section>
-</main>
-
-<footer>
-  <strong>BALKAN RAGE GAMING</strong>
-  <p>© 2026 · Counter-Strike 2 Community</p>
-</footer>
-
-<script>
-async function updateSteamLogin() {
-  try {
-    const response = await fetch('/api/me');
-    const data = await response.json();
-    const button = document.querySelector('nav a[href="/auth/steam"]');
-
-    if (button && data.loggedIn && data.user) {
-      button.textContent = '👤 ' + data.user.displayName;
-      button.href = '/api/me';
-    }
-  } catch (error) {
-    console.error('Steam login error:', error);
-  }
-}
-updateSteamLogin();
 </script>
 </body>
 </html>
